@@ -18,9 +18,12 @@ import {
 } from "@chakra-ui/react";
 import { useState } from "react";
 import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
+import { createSchool } from "../../nest-api/school-auth";
 
-export default function UserAuth() {
+export default function Signup() {
   const [showPassword, setShowPassword] = useState(false);
+
+  createSchool();
 
   return (
     <Flex
@@ -94,7 +97,10 @@ export default function UserAuth() {
             </Stack>
             <Stack pt={6}>
               <Text align={"center"}>
-                Already a user? <Link color={"blue.400"}>Login</Link>
+                Already a user?{" "}
+                <Link color={"blue.400"} href="/login">
+                  Login
+                </Link>
               </Text>
             </Stack>
           </Stack>

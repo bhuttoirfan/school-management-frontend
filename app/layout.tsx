@@ -1,6 +1,6 @@
 import { ChakraProvider } from "@chakra-ui/react";
 import Navbar from "../components/navbar";
-import UserAuth from "./auth/page";
+import UserAuth from "./signup/page";
 
 export const metadata = {
   title: "Next.js",
